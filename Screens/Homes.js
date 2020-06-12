@@ -3,7 +3,7 @@ import {StyleSheet, View, Text, FlatList, TouchableOpacity} from 'react-native';
 import Card from "../Shared/Card";
 
 
-export default function Homes() {
+export default function Homes({ navigation }) {
 
     const [houses, setHouses] = useState([
         {name: 'Ranka\'s', key: '1'},
@@ -20,7 +20,7 @@ export default function Homes() {
                     {name: 'Neelams', key: '3'},
                 ]}
                 renderItem = {({item}) => (
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Rooms')}>
                     <Card>
                         <Text>{item.name}</Text>
                     </Card>

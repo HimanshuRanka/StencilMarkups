@@ -3,15 +3,12 @@ import { StyleSheet, Text, View } from 'react-native';
 import Homes from './Screens/Homes'
 import Rooms from "./Screens/Rooms";
 import ItemSheet from "./Screens/ItemSheet";
+import {NavigationContainer} from "@react-navigation/native";
+import Navigator from './Routes/MainStack'
 
 export default function App() {
   return (
-      /*<View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>*/
-      <View style={styles.container}>
-        <ItemSheet />
-      </View>
+      <Navigator />
   );
 }
 
